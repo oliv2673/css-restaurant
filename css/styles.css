@@ -12,9 +12,6 @@ body {
 
 }
 
-main {
-    padding-bottom: 2rem;
-}
 
 header {
     width: 100%;
@@ -45,23 +42,36 @@ header {
         }
 
         a:hover {
-            color: antiquewhite;
+            color: rgb(245, 208, 161);
         }
 
         span {
             background-color: var(--white);
             width: 80%;
-            height: 2px;
+            height: 1px;
         }
     }
 }
 
+main {
+    padding-bottom: 2rem;
+}
+
 section {
-    margin: 1rem 1rem;
+    margin: 0.5rem;
+
+    div:nth-child(1) {
+
+        display: flex;
+        justify-content: center;
+    }
 
     img {
-        width: 100%;
+        max-width: 100%;
         border-radius: 0.5rem;
+        height: auto;
+        object-fit: scale-down;
+
     }
 
 }
@@ -69,7 +79,6 @@ section {
 p {
     font-size: var(--bodyText);
     font-family: var(--link);
-    max-width: 60ch;
 }
 
 ul {
@@ -109,4 +118,51 @@ footer {
     background-color: var(--blue);
     color: var(--white);
     font-size: 0.8rem;
+}
+
+
+/************ TABLET & DESKTOP ************/
+@media only screen and (min-device-width: 768px) {
+    header {
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            padding-left: 1.5rem;
+            gap: 1.5rem;
+        }
+
+        span {
+            display: none;
+        }
+    }
+
+    main {
+        margin: auto;
+        max-width: 1200px;
+
+    }
+
+    .con {
+        display: flex;
+        gap: 1rem;
+
+        div {
+
+
+            img {
+                width: 100%;
+                min-width: 400px;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+
+        div:nth-child(1) {
+            order: 1;
+            width: 100%;
+
+        }
+    }
+
 }
