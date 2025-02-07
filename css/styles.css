@@ -1,61 +1,5 @@
 @import "variables.css";
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--bodyText);
-}
-
-body {
-    background-color: var(--white);
-
-}
-
-
-header {
-    width: 100%;
-
-    h1 {
-        background-color: var(--red);
-        text-align: center;
-        font-family: var(--title);
-        color: white;
-        padding: 1rem;
-        font-size: 2rem;
-    }
-
-    nav {
-        padding: 1rem 0;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 0.4rem;
-        background-color: var(--blue);
-
-        a {
-            text-decoration: none;
-            color: var(--white);
-            font-family: var(--bodyText);
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        a:hover {
-            color: rgb(245, 208, 161);
-        }
-
-        span {
-            background-color: var(--white);
-            width: 80%;
-            height: 1px;
-        }
-    }
-}
-
-main {
-    padding-bottom: 2rem;
-}
 
 section {
     margin: 0.5rem;
@@ -76,10 +20,6 @@ section {
 
 }
 
-p {
-    font-size: var(--bodyText);
-    font-family: var(--link);
-}
 
 ul {
     padding: 1rem;
@@ -109,39 +49,11 @@ ul {
     }
 }
 
-footer {
-    width: 100%;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    padding: 0.5rem;
-    background-color: var(--blue);
-    color: var(--white);
-    font-size: 0.8rem;
-}
 
 
 /************ TABLET & DESKTOP ************/
 @media only screen and (min-device-width: 768px) {
-    header {
 
-        nav {
-            display: flex;
-            flex-direction: row;
-            padding-left: 1.5rem;
-            gap: 1.5rem;
-        }
-
-        span {
-            display: none;
-        }
-    }
-
-    main {
-        margin: auto;
-        max-width: 1200px;
-
-    }
 
     .con {
         display: flex;
