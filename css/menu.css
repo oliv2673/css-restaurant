@@ -1,1 +1,98 @@
 @import "variables.css";
+
+
+main {
+
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1rem;
+
+        article {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background-color: bisque;
+            padding: 1rem;
+            border-radius: 1rem;
+            height: 100%;
+
+            img {
+                border-radius: 1rem;
+
+            }
+
+            div {
+                h2 {
+                    background-color: var(--red);
+                    color: var(--white);
+                    border-radius: 0.5rem;
+                    padding: 0.5rem;
+                    text-align: center;
+                    font-family: var(--title);
+
+                }
+
+                .con {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .text {
+                        margin: 1rem 0;
+                    }
+
+                    .price {
+                        background-color: var(--red);
+                        border-radius: 0.5rem;
+                        color: var(--white);
+                        padding: 0.5rem 1rem;
+                        font-weight: bold;
+                        width: fit-content;
+                        border: 0.2rem solid var(--white);
+                        margin-top: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 768px) {
+
+    .text {
+        flex-grow: 1;
+    }
+
+    main {
+        margin: auto;
+        overflow: hidden;
+
+        section {
+            margin: 1rem;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 1rem;
+            gap: 1rem;
+
+
+            article {
+                flex-direction: row;
+                height: 100%;
+
+                img {
+                    order: 1;
+                    object-fit: cover;
+
+
+                    max-width: 300px;
+
+                }
+            }
+        }
+
+    }
+}
